@@ -58,14 +58,17 @@ def do_roll(dice_tpl):
                 explodes[i].append(random.randint(1,size))
                 while explodes[i][-1] >= threshold:
                     explodes[i].append(random.randint(1,size))
-                    roll_totals[i] += explodes[i][-1]
     number_result = sum(rolls)
     if dice_tpl[0] is not None:
         number_result += int(dice_tpl[0][:-1])
     for e in explodes:
         number_result += sum(e)
-    rv = "{}\n(".format(number_result)
-    if len(original_rolls) < len(rolls):
+        
+    rv = "{}\n".format(number_result)
+    if dice_tpl[0] is not None:
+        rv += dice_tpl[0]
+    rv += '('
+    if len(original_rolls) > len(rolls):
         for i in range(len(original_rolls)):
             if i > 0:
                 rv += ', '
@@ -76,11 +79,11 @@ def do_roll(dice_tpl):
             rv += ', '
         rv += "{}".format(rolls[i])
         if len(explodes[i]) > 0:
-            rv += ' {}'.format(explodes)
+            rv += ' {}'.format(explodes[i])
     rv += ')'
     return rv
     
-client.run('NDgxNDMwMDk4NTc5NDIzMjQx.Xn4PVg.FqSLfTukqdsfTOjA1Dr81a7oL1Q')
+client.run('NDgxNDMwMDk4NTc5NDIzMjQx.Xn5JIw.0OkhoiuQf4LR1z5g6sE4xejcnIc')
 
 #:game_die:
 #message.author.mention

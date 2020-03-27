@@ -27,7 +27,7 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(message.author.mention +' :game_die:\n{} Sucesses {}'.format(sucesses,str))
         
-client.run('NDgxNDMwMDk4NTc5NDIzMjQx.Xn4PVg.FqSLfTukqdsfTOjA1Dr81a7oL1Q')
+client.run('NDgxNDMwMDk4NTc5NDIzMjQx.Xn5JIw.0OkhoiuQf4LR1z5g6sE4xejcnIc')
 
 #:game_die:
 #message.author.mention

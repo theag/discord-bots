@@ -2,7 +2,7 @@ from discord.ext.commands import Bot
 from discord import Game,utils
 import re,dice,monster,asyncio,math
 
-TOKEN = 'NDgxNDMwMDk4NTc5NDIzMjQx.DmAruQ.b3Xk-mYGGZJQe0p2zKlo9EotfWw'
+TOKEN = 'NDgxNDMwMDk4NTc5NDIzMjQx.Xn5JIw.0OkhoiuQf4LR1z5g6sE4xejcnIc'
 BOT_PREFIX = ("?","!","=")
 
 client = Bot(command_prefix=BOT_PREFIX)
