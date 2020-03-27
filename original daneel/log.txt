@@ -1,0 +1,6 @@
+mathlady: @Daneel
+mathlady: =r 1d8
+Daneel: @mathlady :game_die:
+1d8 (3)
+3
+mathlady: @all
