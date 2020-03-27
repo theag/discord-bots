@@ -1,7 +1,7 @@
 import discord, re, random
 
 client = discord.Client()
-patt = re.compile('(?<=[rR])\d+')
+patt = re.compile('^[rR]\d+$')
 
 @client.event
 async def on_ready():
@@ -11,9 +11,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    m = patt.search(message.content)
-    if m is not None and message.content == 'r'+m.group(0):
-        n = int(m.group(0))
+    m = patt.match(message.content)
+    if m is not None:
+        n = int(m.group(0)[1:])
         sucesses = 0
         str = '('
         for i in range(n):
