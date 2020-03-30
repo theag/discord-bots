@@ -244,7 +244,8 @@ def do_roll(dice_tpl):
     return rv
 
 f = open('bot-token.json', 'r')
-client.run(json.load(f)[0])
+client.run(json.load(f))
+f.close()
 
 #:game_die:
 #message.author.mention

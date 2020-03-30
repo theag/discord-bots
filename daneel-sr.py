@@ -32,7 +32,8 @@ async def on_message(message):
             +' :game_die:\n{} Sucesses {}'.format(sucesses,str))
         
 f = open('bot-token.json', 'r')
-client.run(json.load(f)[0])
+client.run(json.load(f))
+f.close()
 
 #:game_die:
 #message.author.mention
