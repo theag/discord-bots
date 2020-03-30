@@ -12,10 +12,14 @@ async def on_message(message):
     if message.author == client.user:
         return
     m = patt.search(message.content)
+    print('starting roll for {}'.format(message.author.name))
     while m is not None:
         result = do_roll(m.groups())
+        print('rolling: {} -> {}'.format(m.groups(),result))
         await message.channel.send(message.author.mention +' :game_die:\n' +result)
         m = patt.search(message.content,m.end())
+    print('done')
+    
 
 def do_roll(dice_tpl):
     size = int(dice_tpl[2])
@@ -83,7 +87,7 @@ def do_roll(dice_tpl):
     rv += ')'
     return rv
     
-client.run('NDgxNDMwMDk4NTc5NDIzMjQx.Xn5JIw.0OkhoiuQf4LR1z5g6sE4xejcnIc')
+client.run('NDgxNDMwMDk4NTc5NDIzMjQx.Xn5aQQ.LX_bkwdSL2BERxvCJfnnAgjkeTM')
 
 #:game_die:
 #message.author.mention
