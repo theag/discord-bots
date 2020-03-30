@@ -1,8 +1,9 @@
 from discord.ext.commands import Bot
 from discord import Game,utils
-import re,dice,monster,asyncio,math
+import re,dice,monster,asyncio,math,json
 
-TOKEN = 'NDgxNDMwMDk4NTc5NDIzMjQx.Xn5JIw.0OkhoiuQf4LR1z5g6sE4xejcnIc'
+f = open('bot-token.json', 'r')
+TOKEN = json.load(f)[0]
 BOT_PREFIX = ("?","!","=")
 
 client = Bot(command_prefix=BOT_PREFIX)
