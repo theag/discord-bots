@@ -11,7 +11,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content.lower().startwith("weather"):
+    if message.content.lower().startswith("weather"):
         result = weather(message.content.lower()[8:].strip())
         await message.channel.send("{} {}\n{}".format(message.author.mention ,result[0],result[1]))
         return
